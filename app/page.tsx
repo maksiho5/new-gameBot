@@ -5,9 +5,12 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Harek from '@/src/HarekHome/HarekHome';
 
+// Определяем тип для TelegramWebApp (замените 'any' на более конкретный тип, если возможно)
+type TelegramWebAppType = any; // Или null
+
 export default function Home() {
     const [userId, setUserId] = useState(0);
-    const [TelegramWebApp, setTelegramWebApp] = useState(null); // Состояние для TelegramWebApp
+    const [TelegramWebApp, setTelegramWebApp] = useState<TelegramWebAppType | null>(null); // Состояние для TelegramWebApp
 
     useEffect(() => {
         // Динамический импорт библиотеки

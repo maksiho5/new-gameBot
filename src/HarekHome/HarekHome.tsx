@@ -1,5 +1,5 @@
 'use client'
-
+import Image from 'next/image';
 import { useCallback, useEffect, useState } from "react";
 import './HarekHome.css'
 import QuestionsModal from "../QuestionsModal/QuestionsModal";
@@ -11,6 +11,7 @@ export default function Harek() {
     const [isClicking, setIsClicking] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    
     const clickValue = 1;
     const clickDelay = 100;
     let timeoutId: any = null;
@@ -98,16 +99,16 @@ export default function Harek() {
 
                 <div className="interactions">
                     <div className="coins">
-                        <img src="/valute_harek.png" alt="Coins" />
+                        <Image src="/valute_harek.png" alt="Coins" />
                         <h1 className="coins_number">{coins}</h1>
                     </div>
                     <div className={`cliker ${isClicking ? 'clicked' : ''}`} onClick={handleClick}>
                         <div className={`harek`}>
-                            <img src="/harek.png" alt="Harek" />
+                            <Image src="/harek.png" alt="Harek" />
                         </div>
                         <div className={`round_harek ${isClicking ? 'clicked' : ''}`} onClick={handleClick}>
                             <div className={`harek`}>
-                                <img src="/round_harek.svg" alt="Round Harek" />
+                                <Image src="/round_harek.svg" alt="Round Harek" />
                             </div>
 
                         </div>
@@ -117,7 +118,7 @@ export default function Harek() {
                 <div className="force_container">
                     <div className="force_block">
                         <div className="lightning">
-                            <img src="/lightning.svg" alt="Lightning" />
+                            <Image src="/lightning.svg" alt="Lightning" />
                         </div>
                         <h2>{force}/6500</h2>
                     </div>
@@ -128,7 +129,7 @@ export default function Harek() {
                     <div className="upgrade-list">
                         {/*  Здесь будут элементы улучшений  */}
                         <div className="upgrade-item">
-                            <img src="/hamster.svg" alt="Улучшение 1" />
+                            <Image src="/hamster.svg" alt="Улучшение 1" />
                             <div>
                                 <h3>Автокликер</h3>
                                 <p>Автоматически кликает за вас.</p>
@@ -136,7 +137,7 @@ export default function Harek() {
                             </div>
                         </div>
                         <div className="upgrade-item">
-                            <img src="/hamster.svg" alt="Улучшение 2" />
+                            <Image src="/hamster.svg" alt="Улучшение 2" />
                             <div>
                                 <h3>Удвоение клика</h3>
                                 <p>Увеличивает количество монет за клик.</p>
@@ -149,14 +150,14 @@ export default function Harek() {
                 <div className="menu">
                     <ul>
                         <li>
-                            <img src="/icon_bitcon.svg" alt="Bitcon Icon" />
+                            <Image src="/icon_bitcon.svg" alt="Bitcon Icon" />
                         </li>
                         <li>
                             <a href="#">Главная</a>
                         </li>
                     </ul>
                     <ul>
-                        <img src="/kirca.svg" alt="Kirca Icon" />
+                        <Image src="/kirca.svg" alt="Kirca Icon" />
                         <li>
                             <a href="#">Прокачка</a>
                         </li>
